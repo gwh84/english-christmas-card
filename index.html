@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Navidad</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #0b1d3a, #050d1f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 50px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  padding-bottom: 40px;
+}
+
+/* TREE */
+.tree {
+  position: relative;
+  width: 240px;
+  margin: auto;
+}
+
+/* Star */
+.star {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: gold;
+  text-shadow: 0 0 15px gold;
+}
+
+/* Branch Layers */
+.branch {
+  position: relative;
+  margin: -35px auto;
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 130px solid #0f8a43;
+  filter: drop-shadow(0 8px 6px rgba(0,0,0,0.4));
+}
+
+.branch:nth-child(2) {
+  border-left-width: 100px;
+  border-right-width: 100px;
+  border-bottom-width: 115px;
+  border-bottom-color: #0d7a3a;
+}
+
+.branch:nth-child(3) {
+  border-left-width: 85px;
+  border-right-width: 85px;
+  border-bottom-width: 100px;
+  border-bottom-color: #0b6a33;
+}
+
+.branch:nth-child(4) {
+  border-left-width: 65px;
+  border-right-width: 65px;
+  border-bottom-width: 85px;
+  border-bottom-color: #095c2c;
+}
+
+/* Ornaments */
+.ornament {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4);
+}
+
+.red { background: #d32f2f; }
+.blue { background: #1976d2; }
+.gold { background: gold; }
+
+.o1 { top: 90px; left: 80px; }
+.o2 { top: 120px; left: 140px; }
+.o3 { top: 170px; left: 60px; }
+.o4 { top: 200px; left: 150px; }
+.o5 { top: 240px; left: 100px; }
+
+/* Lights */
+.light {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: cyan;
+  box-shadow: 0 0 10px cyan;
+  animation: blink 2s infinite alternate;
+}
+
+.l1 { top: 110px; left: 110px; }
+.l2 { top: 150px; left: 90px; animation-delay: .5s; }
+.l3 { top: 190px; left: 130px; animation-delay: 1s; }
+.l4 { top: 230px; left: 80px; animation-delay: 1.5s; }
+
+@keyframes blink {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Trunk */
+.trunk {
+  width: 40px;
+  height: 50px;
+  background: linear-gradient(#6b3e26, #4e2a18);
+  margin: 15px auto 0;
+  border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Feliz Navidad</h1>
+
+    <div class="tree">
+      <div class="star">⭐</div>
+
+      <div class="branch"></div>
+      <div class="branch"></div>
+      <div class="branch"></div>
+      <div class="branch"></div>
+
+      <!-- Ornaments -->
+      <div class="ornament red o1"></div>
+      <div class="ornament blue o2"></div>
+      <div class="ornament gold o3"></div>
+      <div class="ornament red o4"></div>
+      <div class="ornament blue o5"></div>
+
+      <!-- Lights -->
+      <div class="light l1"></div>
+      <div class="light l2"></div>
+      <div class="light l3"></div>
+      <div class="light l4"></div>
+    </div>
+
+    <div class="trunk"></div>
+  </div>
+</body>
+</html>
